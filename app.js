@@ -22,11 +22,7 @@ const resetGame = () => {
    turnO = true;
    enableBoxes();
    msgContainer.classList.add("hide");
-   pageReload();
-}
-// page refres..
-const pageReload = () => {
-   location.reload();
+   count=0;
 }
 
 // when winner any one win then button disabled..
@@ -72,6 +68,7 @@ const showWinner = (winner) => {
 for (let box of boxes) {
    box.addEventListener("click", function () {
       count++;
+      //console.info(count);
       if (count === 9) {
          msg.innerText = "The Game was draw";
          msgContainer.classList.remove("hide");
